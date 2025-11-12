@@ -1,24 +1,28 @@
 package org.example;
 
 
-public class Calculator
+public final class Calculator
 {
-    public double add(double a, double b)
+    private Calculator()
+    {
+    }
+
+    public static double add(double a, double b)
     {
         return a + b;
     }
 
-    public double subtract(double a, double b)
+    public static double subtract(double a, double b)
     {
         return a - b;
     }
 
-    public double multiply(double a, double b)
+    public static double multiply(double a, double b)
     {
         return a * b;
     }
 
-    public double divide(double a, double b) throws ArithmeticException
+    public static double divide(double a, double b) throws ArithmeticException
     {
         if (b == 0)
         {
@@ -27,7 +31,7 @@ public class Calculator
         return a / b;
     }
 
-    public double squareRoot(double a) throws InvalidInputException
+    public static double squareRoot(double a) throws InvalidInputException
     {
         if (a < 0)
         {
