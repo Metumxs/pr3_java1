@@ -93,9 +93,10 @@ public class Main
             }
             finally
             {
-                System.out.println("\n--- Завершення обробки запиту ---");
-
+                System.out.println("\n----------------------------------");
                 System.out.println("Натисніть Enter для продовження...");
+                System.out.println("----------------------------------");
+
                 scanner.nextLine();
             }
         }
