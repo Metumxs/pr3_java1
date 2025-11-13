@@ -14,6 +14,8 @@ public class Main
         {
             try
             {
+                double result;
+
                 System.out.println("\n=== КАЛЬКУЛЯТОР ===");
                 System.out.println("Оберіть операцію:");
                 System.out.println("1. Додавання (+)");
@@ -24,33 +26,35 @@ public class Main
                 System.out.println("\n0. Вийти"); // ДОДАНО
                 System.out.print("\nВаш вибір (0-5): ");
 
-                int choice = scanner.nextInt();
+                int choiceOperation = scanner.nextInt();
                 scanner.nextLine();
 
                 // Перевірка на вихід
-                if (choice == 0)
+                if (choiceOperation == 0)
                 {
                     break;
                 }
 
-                System.out.print("Введіть перше число: ");
-                double num1 = scanner.nextDouble();
-                scanner.nextLine();
-
-                double result;
-
-                if (choice == 5) // Квадратний корінь
+                if (choiceOperation == 5) // Квадратний корінь
                 {
+                    System.out.print("Введіть число: ");
+                    double num1 = scanner.nextDouble();
+                    scanner.nextLine();
+
                     result = Calculator.squareRoot(num1);
                     printResult(num1, result, "√");
                 }
-                else if (choice >= 1 && choice <= 4)
+                else if (choiceOperation >= 1 && choiceOperation <= 4)
                 {
+                    System.out.print("Введіть перше число: ");
+                    double num1 = scanner.nextDouble();
+                    scanner.nextLine();
+
                     System.out.print("Введіть друге число: ");
                     double num2 = scanner.nextDouble();
                     scanner.nextLine();
 
-                    switch (choice)
+                    switch (choiceOperation)
                     {
                         case 1: // Додавання
                             result = Calculator.add(num1, num2);
@@ -78,7 +82,7 @@ public class Main
             }
             catch (ArithmeticException | InvalidInputException e)
             {
-                System.err.println("Помилка обчислення: " + e.getMessage());
+                System.err.println(e.getMessage());
             }
             catch (InputMismatchException e)
             {
@@ -108,12 +112,12 @@ public class Main
     private static void printResult(double num1, double num2, double result, String operator)
     {
         System.out.println("\n" + num1 + " " + operator + " " + num2 + " = " + result);
-        System.out.println("Результат: " + result);
+        System.out.println("РЕЗУЛЬТАТ: " + result);
     }
 
     private static void printResult(double num1, double result, String Operator)
     {
         System.out.println("\n" + Operator + num1 + " = " + result);
-        System.out.println("Результат: " + result);
+        System.out.println("РЕЗУЛЬТАТ: " + result);
     }
 }

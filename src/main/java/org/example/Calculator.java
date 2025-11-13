@@ -26,7 +26,7 @@ public final class Calculator
     {
         if (b == 0)
         {
-            throw new ArithmeticException("Помилка: ділення на нуль неможливе!");
+            throw new ArithmeticException("Помилка: Ділення на нуль неможливе!");
         }
         return a / b;
     }
@@ -35,7 +35,7 @@ public final class Calculator
     {
         if (a < 0)
         {
-            throw new InvalidInputException("Помилка: неможливо взяти квадратний корінь з від'ємного числа!");
+            throw new InvalidInputException("Помилка: Неможливо взяти квадратний корінь з від'ємного числа!");
         }
         return Math.sqrt(a);
     }
