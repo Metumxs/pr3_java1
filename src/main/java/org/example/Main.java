@@ -76,7 +76,7 @@ public class Main
                 }
                 else
                 {
-                    System.out.println("Невірний вибір. Оберіть число від 0 до 5.");
+                    System.out.println("Невірний вибір! Оберіть число від 0 до 5.");
                 }
 
             }
