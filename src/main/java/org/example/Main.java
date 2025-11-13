@@ -23,7 +23,7 @@ public class Main
                 System.out.println("3. Множення (*)");
                 System.out.println("4. Ділення (/)");
                 System.out.println("5. Квадратний корінь (√)");
-                System.out.println("\n0. Вийти"); // ДОДАНО
+                System.out.println("\n0. Вийти");
                 System.out.print("\nВаш вибір (0-5): ");
 
                 int choiceOperation = scanner.nextInt();
