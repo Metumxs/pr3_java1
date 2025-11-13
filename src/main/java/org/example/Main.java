@@ -86,7 +86,7 @@ public class Main
             }
             catch (InputMismatchException e)
             {
-                System.err.println("Помилка вводу: будь ласка, вводьте тільки числа.");
+                System.err.println("Помилка вводу: Вводьте тільки числа!");
 
                 // Очищення буфера сканера від помилкового вводу, щоб уникнути нескінченного циклу
                 scanner.nextLine();
